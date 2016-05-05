@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get '/write_h' => "home#write_h"
   get '/read_h' => "home#read_h"
   get '/' => "home#index_h"
-  
-  # The priority is based upon order of creatio
+  post '/' => "home#index_h"
+   # The priority is based upon order of creatio
   # n: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
