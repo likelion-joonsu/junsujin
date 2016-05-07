@@ -16,9 +16,15 @@
 </nav>
 
 <div class = "container">
-    <h1>글 읽기 페이지입니다</h1>
-    <%= @title %>
-    <%= @content %>
-    
+    <h1>글 리스트 페이지입니다</h1>
+
+    <% @every_post.each do |p| %>
+    제목 : <%= p.title %> <br>
+    내용 : <%= p.content %><br>
+    시간 : <%= p.created_at %>
+    <a href = "/destroy/<%= p.id %>">[삭제]</a>
+    <a href = "/update_view/<%= p.id %>">[수정]</a>
+    <hr>
+    <% end %>
 <a href="/" style = "margin-top : 50px" class="btn btn-warning waves-effect waves-light">홈으로</a>
 </div>
