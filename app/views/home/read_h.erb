@@ -17,8 +17,10 @@
 
 <div class = "container">
     <h1>글 읽기 페이지입니다</h1>
-    <%= @title %>
-    <%= @content %>
-    
+    <%= @one_post.title%>
+    <%= @one_post.content %>
+    <img src="<%= @one_post.img_file.url%>"  width="300px" height="300px">
+    <a href="/destroy_h/<%=@one_post.id%>">[삭제]</a>
+    <a href="/update_view_h/<%=@one_post.id%>">[수정]</a>
 <a href="/" style = "margin-top : 50px" class="btn btn-warning waves-effect waves-light">홈으로</a>
 </div>

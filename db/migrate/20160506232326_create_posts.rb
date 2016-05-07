@@ -5,6 +5,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string "title"
       t.string "content"
       
+      t.string "img_file"
+      
       t.timestamps null: false
     end
   end

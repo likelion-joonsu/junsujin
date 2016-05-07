@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   root 'home#index_h'
-  get '/write_h' => "home#write_h"
-  get '/read_h' => "home#read_h"
-  post '/read_h' => "home#read_h"
-  get '/list_h' => "home#list_h"
-  get '/destroy/:post_id' => "home#destroy"
-  get '/update_view/:post_id' => "home#update_view"
-  post 'update/:post_id' => "home#update"
+  get '/write_view_h' => "home#write_view_h"
+  post '/write_h' => "home#write_h"
+  
+  get "/read_h/:post_id" => "home#read_h"
+  
+  get '/destroy_h/:post_id' => "home#destroy_h"
+  get '/update_view_h/:post_id' => "home#update_view_h"
+  post 'update_h/:post_id' => "home#update_h"
   get '/' => "home#index_h"
   post '/' => "home#index_h"
   get '/home/index_s'
