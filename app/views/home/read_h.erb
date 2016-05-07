@@ -17,11 +17,27 @@
 </nav>
 
 <div class = "container">
-    <h1>글 읽기 페이지입니다</h1>
-    <%= @one_post.title%>
-    <%= @one_post.content %>
-    <img src="<%= @one_post.img_file.url%>"  width="300px" height="300px">
-    <a href="/destroy_h/<%=@one_post.id%>">[삭제]</a>
-    <a href="/update_view_h/<%=@one_post.id%>">[수정]</a>
-<a href="/" style = "margin-top : 50px" class="btn btn-warning waves-effect waves-light">홈으로</a>
+  <div class="row">
+   
+    <div class="col-sm-10"></div>
+
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2><%= @one_post.title %></h2>
+      
+    <div class="row">
+      <div class="col-sm-5"><h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5></div>
+      <div class="col-sm-6"></div>
+      <div class="col-sm-1"> <h5><span class="label label-danger"><a href="/destroy_h/<%=@one_post.id%>">삭제</a></span><span class="label label-success"><a href="/update_view_h/<%=@one_post.id%>">수정</a></span></h5><br></div>
+    </div>
+      
+      <p><%= @one_post.content %></p>
+      <img src="<%= @one_post.img_file.url%>"  width="300px" height="300px">
+      <hr>
+
+      <button class="btn btn-success"><a href="/">홈으로</a></button>
+      </form>
+      <br><br>
+      </div>
+  </div>
 </div>
