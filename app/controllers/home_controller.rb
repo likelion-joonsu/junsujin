@@ -13,7 +13,7 @@ class HomeController < ApplicationController
      new_post.content = @content
      new_post.save
     
-     
+     redirect_to "/list_h"
   end
   def list_h
      @every_post = Post.all.order("id desc")
@@ -21,9 +21,9 @@ class HomeController < ApplicationController
   def destroy
      @one_post = Post.find(params[:post_id])
      @one_post.destroy
-     redirect_to "/lsit_h"
+     redirect_to "/list_h"
   end
-  def update_view
+  def update_view_h
      @one_post = Post.find(params[:post_id]) 
   end
   def update
