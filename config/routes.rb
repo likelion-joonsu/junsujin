@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/read_h' => "home#read_h"
   get '/' => "home#index_h"
   post '/' => "home#index_h"
-  get '/home/index_s'
+  get '/index_s' => 'home#index_s'
    # The priority is based upon order of creatio
   # n: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
