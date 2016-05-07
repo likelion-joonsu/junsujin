@@ -20,7 +20,8 @@ class HomeController < ApplicationController
   def destroy_h
     one_post = Post.find(params[:post_id])
     one_post.destroy
-    redirect_to :back
+    one_post.save   
+    redirect_to "/home/index"
   end
   def update_view_h
      @one_post = Post.find(params[:post_id]) 
