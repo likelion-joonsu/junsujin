@@ -1,7 +1,7 @@
 <div class="jumbotron background-head" style="padding-top:35px;padding-bottom:35px;">
   <div class="container text-center" >
-    <h1 style="color:white;">동아리 홍보</h1>    
-    <p style="color:white;">영남대 동아리 소개 & 홍보</p>
+    <h1 style="color:white;">영남대 동아리 홍보</h1>    
+    <p style="color:white;">동아리 홍보 및 소개하는 페이지 입니다</p>
   </div>
 </div>
 
@@ -20,35 +20,32 @@
  
 
 <div class="container-fluid text-center background-body" style="padding-right:100px; padding-left:150px;">    
-  <div class="row content text-center" style = "height :400px; margin-top: 20px;">
+  <div class="row content text-center" style = "height :800px; margin-top: 20px;">
      <% @every_post.each do |p| %>
     
-      <div class="col-sm-3 sidenav" style="padding-top:15px;">
-        <div class="panel panel-default" style="margin:auto; height: 300px; width:250px;box-shadow: 3px 3px 3px #666666; ">
+      <div class="col-sm-3 sidenav" style="padding-top:40px;">
+        <div class="panel panel-inverse" style="margin:auto; height: 340px; width:320px;box-shadow: 3px 3px 3px #666666; ">
           <div class="panel-body">
-            <a href="/read_h/<%=p.id%>" ><img src="<%= p.img_file.url%>"  width="200px" height="200px"></a>
+            <a href="/read_h/<%=p.id%>" ><img src="<%= p.img_file.url%>"  width="280px" height="280px"></a>
             
           </div>
-          <br><br>
-                    <a href='/read_h/<%=p.id%>'><p>제목 : <%= p.title %></p></a>
+     
+          <p style="font-weight:bold; font-color:white"><%= p.title %></p>
         </div>
     </div>
        <% end %>
        
-    <div class="col-sm-3 sidenav" style=" height: 300px; padding-top:100px;"> 
+    <div class="col-sm-3 sidenav" style=" height: 340px; padding-top:150px;"> 
         <a href="/write_view_h"><button class="btn1 btn1:hover;">+</button></a>
     </div>
 
 
     </div>
   </div>
-   
-
-    <hr>
 </div>
 
 
   <footer class="container-fluid text-left">
-  <p>만든 이 : 영남대 ㅇㅇㅇ, ㅇㅇㅇ</p>
+  <p>만든 이 :  해련, 성수, 다은</p>
 </footer>
 

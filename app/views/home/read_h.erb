@@ -21,7 +21,7 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
 
-      <h4><small>RECENT POSTS</small></h4>
+      <h4><small>동아리를 소개합니다</small></h4>
       <hr>
       <h2><%= @one_post.title %></h2>
       
@@ -32,19 +32,22 @@
       <a href="/update_view_h/<%=@one_post.id%>" class="btn btn-warning btn-xs" role="button">수정</a>
       <a href="/destroy_h/<%=@one_post.id%>" class="btn btn-danger btn-xs">삭제</a>
 
-
-  </form>
-      <br></div>
+    
+      </form>
+      </div>
     </div>
       
-      <p><%= @one_post.content %></p>
-      <img src="<%= @one_post.img_file.url%>"  width="300px" height="300px">
-      <hr>
-      
+
+      <img src="<%= @one_post.img_file.url%>"  width="500px" height="500px">
+      <p style = "margin-top : 20px"><%= @one_post.content %></p></br>
+      <hr>      
+
+      <p style="font-weight:bold;">댓글( <%= @one_post.replies.count %> )</p></br>
+
       <% @one_post.replies.each do |reply| %>
-        <%= reply.content %></br>
+        <%= reply.content %><hr>
       <%end%>
-      <hr>
+
     <div class="row">
        <div class="col-sm-10">      
       <form action = "/home/<%=@one_post.id%>/comment_create" method = "post">
@@ -55,7 +58,7 @@
         <hr>
 
   </div>
-      <a href="/" class="btn btn-info" role="button">홈으로</a>
+      <a href="/" class="btn btn-info" role="button" >홈으로</a>
 
       </form>
       <br><br></div>
