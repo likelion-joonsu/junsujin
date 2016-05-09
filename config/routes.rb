@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post 'home/:post_id/comment_create' => 'home#comment_create'
   
   get '/write_s'=>"home#write_s"
+  get '/read_s'=>"home#read_s"
+  get'/write_view_s'=>"home#write_view_s"
+
    # The priority is based upon order of creatio
   # n: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
