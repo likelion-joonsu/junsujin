@@ -43,19 +43,19 @@ class HomeController < ApplicationController
   end
   def write_view_s
     
-    new_post = Writing.new
-     new_post.subject = params[:subject]
-     new_post.stuff = params[:stuff]
-     new_post.img_file = params[:img_file]
-     new_post.save
+    new_writing = Writing.new
+     new_writing.subject = params[:subject]
+     new_writing.stuff = params[:stuff]
+     new_writing.img_file = params[:img_file]
+     new_writing.save
      
   end
   def write_s
-     new_post = Writing.new
-     new_post.subject = params[:subject]
-     new_post.stuff = params[:stuff]
-     new_post.img_file = params[:img_file]
-     new_post.save
+     new_writing = Writing.new
+     new_writing.subject = params[:subject]
+     new_writing.stuff = params[:stuff]
+     new_writing.img_file = params[:img_file]
+     new_writing.save
      
      redirect_to "/read_h/#{new_post.id}"
   end
@@ -70,13 +70,13 @@ class HomeController < ApplicationController
     redirect_to "/home/index_s"
   end
   def update_view_s
-     @one_post = Post.find(params[:post_num]) 
+     @one_writing = Post.find(params[:post_num]) 
   end
   def update_s
-     @one_post = Post.find(params[:post_num])
-     @one_post.title = params[:title]
-     @one_post.content = params[:content]
-     @one_post.save
+     @one_writing = Post.find(params[:post_num])
+     @one_writing.subject = params[:subject]
+     @one_writing.stuff = params[:stuff]
+     @one_writing.save
      redirect_to "/read_s/#{@one_post.id}"
   end
 end
