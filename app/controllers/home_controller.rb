@@ -57,6 +57,8 @@ class HomeController < ApplicationController
      new_writing.img_file = params[:img_file]
      new_writing.save
      
+     redirect_to "/read_s/#{new_writing.id}"
+     
   end
   def read_s
     @one_writing = Writing.find(params[:post_num])
@@ -78,4 +80,8 @@ class HomeController < ApplicationController
      @one_writing.save
      redirect_to "/read_s/#{@one_writing.id}"
   end
+  def everyview_s
+    @every_writing = Writing.all.order("id desc")
+  end
+    
 end

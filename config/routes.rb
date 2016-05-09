@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get '/write_s'=>"home#write_s"
   get '/read_s'=>"home#read_s"
   get'/write_view_s'=>"home#write_view_s"
+  get'/read_s/:post_num'=>"home#read_s"
+ post '/write_s' => "home#everyview_s"
+ get'/everyview_s'=>"home#everyview_s"
+
 
    # The priority is based upon order of creatio
   # n: first created -> highest priority.

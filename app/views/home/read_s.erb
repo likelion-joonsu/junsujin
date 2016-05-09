@@ -1,33 +1,36 @@
- <h2><%= @one_writing.subject %></h2>
+<div class = "container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+
+      <h4><small>영남대학교와 대외활동</small></h4>
+      <hr>
+      <h2><%= @one_writing.subject %></h2>
       
     <div class="row">
-      <div class="col-sm-6"><h5><span class="glyphicon glyphicon-time"></span> ABCABC.</h5></div>
+      <div class="col-sm-6"><h5><span class="glyphicon glyphicon-time"></span><%=@one_writing.created_at%></h5></div>
       <div class="col-sm-4"></div>
       <div class="col-sm-2"> 
-      <a href="/update_view_s/<%=@one_writing.id%>" class="btn btn-warning btn-xs" role="button">수정</a>
-      <a href="/destroy_s/<%=@one_writing.id%>" class="btn btn-danger btn-xs">삭제</a>
+      <a href="/update_view_h/<%=@one_writing.id%>" class="btn btn-warning btn-xs" role="button">수정</a>
+      <a href="/destroy_h/<%=@one_writing.id%>" class="btn btn-danger btn-xs">삭제</a>
 
     
       </form>
       </div>
     </div>
-      
+      <img src="<%= @one_writing.img_file %>"  width="500px" height="500px">
 
-      <img src="<%= @one_writing.img_file.url%>"  width="500px" height="500px">
+      
       <p style = "margin-top : 20px"><%= @one_writing.stuff %></p></br>
       <hr>      
 
 
-      <%end%>
-
-    
 
   </div>
-      <a href="/intex_s" class="btn btn-info" role="button" >홈으로</a>
+      <a href="/everyview_s" class="btn btn-info" role="button" >게시글 전체보기</a>
 
       </form>
       <br><br></div>
       <div class="col-sm-2"></div>
   </div>
-</div>
 </div>

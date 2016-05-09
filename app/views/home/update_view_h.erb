@@ -18,17 +18,17 @@
 
 <div class = "container">
   <h1>글 수정하기 페이지입니다</h1>
-    <form action = "/update_h/<%=@one_post.id %>" method="POST">
+    <form action = "/update_h/<%=@one_writing.id %>" method="POST">
       <div class="form-group">
         <label for="exampleInputEmail1">제목</label>
-        <input type="text" name="title" value= "<%=@one_post.title %>" class="form-control" id="exampleInputEmail1" placeholder="제목">
+        <input type="text" name="title" value= "<%=@one_writing.subject %>" class="form-control" id="exampleInputEmail1" placeholder="제목">
       </div>
       <label for="exampleInputEmail1">내용</label>
-      <textarea name = "content" class="form-control" rows="5" id="comment"><%=@one_post.content %></textarea>    
+      <textarea name = "content" class="form-control" rows="5" id="comment"><%=@one_writing.stuff %></textarea>    
 
       <div class="form-group"  style="margin-top:20px;">
         <label for="exampleInputFile">이미지 첨부</label>
-        <input type="file" name = "img_file" id="exampleInputFile" value="<%= @one_post.img_file %>">
+        <input type="file" name = "img_file" id="exampleInputFile" value="<%= @one_writing.img_file %>">
       </div>
       
       <button type="submit" class="btn btn-info" style="margin-top:20px;">등록하기</button>
