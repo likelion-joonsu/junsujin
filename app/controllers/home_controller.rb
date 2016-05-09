@@ -43,7 +43,7 @@ class HomeController < ApplicationController
   end
   def write_view_s
     
-    new_writing = Writing.new
+      new_writing = Writing.new
      new_writing.subject = params[:subject]
      new_writing.stuff = params[:stuff]
      new_writing.img_file = params[:img_file]
@@ -64,16 +64,16 @@ class HomeController < ApplicationController
   end
 
   def destroy_s
-    one_post = Writing.find(params[:post_num])
-    one_post.destroy
-    one_post.save   
+    one_writing = Writing.find(params[:post_num])
+    one_writing.destroy
+    one_writing.save   
     redirect_to "/home/index_s"
   end
   def update_view_s
-     @one_writing = Post.find(params[:post_num]) 
+     @one_writing = Writing.find(params[:post_num]) 
   end
   def update_s
-     @one_writing = Post.find(params[:post_num])
+     @one_writing = Writing.find(params[:post_num])
      @one_writing.subject = params[:subject]
      @one_writing.stuff = params[:stuff]
      @one_writing.save
