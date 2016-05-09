@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/index_s' => "home#index_s"
   post 'home/:post_id/comment_create' => 'home#comment_create'
   
+  get '/write_s'=>"home#write_s"
    # The priority is based upon order of creatio
   # n: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -57,7 +57,7 @@ class HomeController < ApplicationController
      new_writing.img_file = params[:img_file]
      new_writing.save
      
-     redirect_to "/read_h/#{new_post.id}"
+     redirect_to "/read_s/#{new_writing.id}"
   end
   def read_s
     @one_writing = Writing.find(params[:post_num])
@@ -77,6 +77,6 @@ class HomeController < ApplicationController
      @one_writing.subject = params[:subject]
      @one_writing.stuff = params[:stuff]
      @one_writing.save
-     redirect_to "/read_s/#{@one_post.id}"
+     redirect_to "/read_s/#{@one_writing.id}"
   end
 end
