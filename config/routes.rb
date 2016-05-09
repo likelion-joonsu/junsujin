@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/' => "home#index_h"
   post '/' => "home#index_h"
   get '/index_s' => "home#index_s"
+  post 'home/:post_id/comment_create' => 'home#comment_create'
   
    # The priority is based upon order of creatio
   # n: first created -> highest priority.

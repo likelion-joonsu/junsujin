@@ -16,7 +16,12 @@ class HomeController < ApplicationController
   def read_h
     @one_post = Post.find(params[:post_id])
   end
-
+  def comment_create
+    @reply = Reply.new(post_id: params[:post_id], content: params[:content])
+    @reply.save
+    redirect_to :back
+  end
+  
   def destroy_h
     one_post = Post.find(params[:post_id])
     one_post.destroy
