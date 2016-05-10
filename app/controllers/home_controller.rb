@@ -11,7 +11,11 @@ class HomeController < ApplicationController
      new_post.img_file = params[:img_file]
      new_post.save
      
-     redirect_to "/read_h/#{new_post.id}"
+     if new_post.save
+        redirect_to "/read_h/#{new_post.id}"
+     else
+        render :text => new_post.errors.messages
+     end
   end
   def read_h
     @one_post = Post.find(params[:post_id])
