@@ -1,12 +1,13 @@
-
 <div class="container">
     <% @every_writing.each do |t| %>
-      <%= t.subject %></br>
-      <%= t.stuff %></br>
-      <%= t.created_at %></br>
-
-      <% end %>
-     
+      <div class="well">
+          <span style="font-weight:bold;"> <%= t.subject %></br> </span>
+        <div class="well">
+          <%= t.stuff %></br>
+        </div>
+          <%= t.created_at %></br>
+      </div>
+    <% end %>
      <hr><br>
     <form action="/everyview_s" method="WRITING">
       <div class="form-group">
